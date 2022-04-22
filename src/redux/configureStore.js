@@ -7,5 +7,6 @@ const rootReducer = combineReducers({
   makeups: makeupReducer,
 });
 
+
 const store = createStore(rootReducer, applyMiddleware(logger, thunk));
 export default store;
