@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: var(--pink);
+  color: var(--gray-white);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 50px;
+  mix-blend-mode: multiply;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  color: var(--orange);
+  padding: 8px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
