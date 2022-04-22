@@ -8,7 +8,7 @@ export const getAllMakeUps = () => async (dispatch) => {
   const result = await getMoviesFromServer();
   dispatch({
     type: GET_ALL_MAKEUPS,
-    payload: resul,
+    payload: result,
   });
 };
 
