@@ -1,0 +1,104 @@
+.makeup-section header a {
+  color: var(--white);
+}
+
+.foundation-intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 20px;
+  background-color: var(--light-pink);
+  align-items: center;
+}
+
+.foundation-img {
+  width: 120px;
+}
+
+.intro-desc {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.intro-desc h2 {
+  padding-bottom: 10px;
+}
+
+.makeup-desc p {
+  background-color: var(--pink);
+  padding: 15px 10px;
+  text-align: justify;
+  color: var(--white);
+}
+
+.desc-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  padding: 10px;
+}
+
+.base-text {
+  text-align: center;
+  padding: 15px 10px;
+  line-height: 24px;
+  background-color: var(--light-pink);
+  color: var(--white);
+}
+
+.footer {
+  background-color: rgb(51, 0, 9);
+  color: var(--white);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .makeup-section header {
+    padding: 20px 5%;
+  }
+
+  .foundation-intro {
+    padding: 2% 0;
+    justify-content: center;
+  }
+
+  .foundation-img {
+    width: 50%;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .intro-desc {
+    font-size: 2rem;
+  }
+
+  tbody tr {
+    padding: 20px;
+  }
+
+  .makeup-desc p,
+  .footer {
+    padding: 20px 0;
+  }
+
+  .base-text {
+    font-size: 1.2rem;
+  }
+}

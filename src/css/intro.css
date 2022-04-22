@@ -1,0 +1,68 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10% 5%;
+  background-color: var(--light-pink);
+}
+
+.makeup-gif {
+  width: 100px;
+  object-fit: cover;
+}
+
+.intro-desc {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.intro-desc h2 {
+  padding-bottom: 10px;
+}
+
+.sort-data {
+  padding: 10px;
+}
+
+#makeup,
+.search {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--gray-white);
+}
+
+option {
+  background-color: var(--mild-pink);
+}
+
+.intro-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    padding: 5%;
+  }
+
+  .makeup-gif {
+    width: 50%;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  .intro-desc {
+    font-size: 2rem;
+  }
+}
