@@ -126,6 +126,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- [Nelson Sakwa on Behance(original app design)](https://www.behance.net/gallery/31579789/Ballhead-App-%28Free-PSDs%29)
 
 ## 📝 License
 
