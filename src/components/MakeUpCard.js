@@ -34,7 +34,7 @@ MakeUpCard.propTypes = {
   foundation: propTypes.objectOf(
     propTypes.oneOfType([propTypes.string, propTypes.number, propTypes.bool, propTypes.array]),
   ).isRequired,
-  className: propTypes.string.isRequired,
+  className: propTypes.string,
   dataAos: propTypes.string.isRequired,
 };
 
