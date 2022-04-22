@@ -39,7 +39,7 @@ MakeUpCard.propTypes = {
 };
 
 MakeUpCard.defaultProps = {
-	className: null,
-}
+  className: null,
+};
 
 export default MakeUpCard;
