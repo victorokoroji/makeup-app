@@ -3,7 +3,7 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGear } from '@fortawesome/free-solid-svg-icons';
 import { NavLink, useLocation } from 'react-router-dom';
-import { getAllMakeUps } from '../redux/makeups/makeups';
+import { getAllFoundations } from '../redux/makeups/makeups';
 import TableRow from '../components/TableRow';
 
 const MakeupPage = () => {
@@ -19,21 +19,19 @@ const MakeupPage = () => {
 
   const dispatch = useDispatch();
 
-  const allMakeups = useSelector((state) => state.makeups, shallowEqual);
-  const foundationList = allMakeups
-    .filter((foundation) => foundation.product_type === 'foundation')
-    .slice(1, 52);
+  const allFoundations = useSelector((state) => state.makeups, shallowEqual);
+  const foundationList = allFoundations.slice(1, 52);
 
   const data = foundationList.filter((foundation) => foundation.id === makeupId)[0];
 
   useEffect(() => {
-    dispatch(getAllMakeUps());
+    dispatch(getAllFoundations());
   }, []);
 
   return (
     <section className="makeup-section">
       <header>
-        <NavLink to="/" onClick={() => dispatch(getAllMakeUps())}>
+        <NavLink to="/" onClick={() => dispatch(getAllFoundations())}>
           <FontAwesomeIcon icon={faArrowLeft} />
         </NavLink>
         <h2>{data && data.brand}</h2>
