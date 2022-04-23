@@ -20,7 +20,7 @@ const MakeupPage = () => {
   const dispatch = useDispatch();
 
   const allFoundations = useSelector((state) => state.makeups, shallowEqual);
-  const foundations = allFoundations.slice(1, 102)
+  const foundations = allFoundations.slice(2, 102)
   const data = foundations.filter((foundation) => foundation.id === makeupId)[0];
 
   useEffect(() => {
