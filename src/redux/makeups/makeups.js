@@ -1,13 +1,13 @@
-import getMoviesFromServer from '../services/makeupService';
+import getMakeupsFromServer from '../services/makeupService';
 
-const GET_ALL_MAKEUPS = 'make-up-app/makeups/GET_ALL_MAKEUPS';
+const GET_ALL_FOUNDATIONS = 'make-up-app/makeups/GET_ALL_FOUNDATIONS';
 
 const initialState = [];
 
-export const getAllMakeUps = () => async (dispatch) => {
-  const result = await getMoviesFromServer();
+export const getAllFoundations = () => async (dispatch) => {
+  const result = await getMakeupsFromServer();
   dispatch({
-    type: GET_ALL_MAKEUPS,
+    type: GET_ALL_FOUNDATIONS,
     payload: result,
   });
 };
@@ -15,7 +15,7 @@ export const getAllMakeUps = () => async (dispatch) => {
 const makeupReducer = (state = initialState, action) => {
   const { payload, type } = action;
   switch (type) {
-    case GET_ALL_MAKEUPS:
+    case GET_ALL_FOUNDATIONS:
       return payload;
     default:
       return state;
