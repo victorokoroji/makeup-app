@@ -3,15 +3,13 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import MakeUpCard from './MakeUpCard';
 import Input from './Input';
-import { getAllMakeUps } from '../redux/makeups/makeups';
+import { getAllFoundations } from '../redux/makeups/makeups';
 
 const MakeupCards = () => {
   const dispatch = useDispatch();
-  const allMakeups = useSelector((state) => state.makeups, shallowEqual);
+  const allFoundations = useSelector((state) => state.makeups, shallowEqual);
 
-  const foundations = allMakeups
-    .filter((foundation) => foundation.product_type === 'foundation')
-    .slice(1, 52);
+  const foundations = allFoundations.slice(1, 52);
 
   const [internalState, setInternalState] = useState(foundations);
   const [inputStateValue, setInputStateValue] = useState('');
@@ -33,7 +31,7 @@ const MakeupCards = () => {
   };
 
   useEffect(() => {
-    dispatch(getAllMakeUps());
+    dispatch(getAllFoundations());
   }, []);
 
   let isEven = true;
