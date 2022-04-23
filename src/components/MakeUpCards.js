@@ -50,7 +50,8 @@ const MakeupCards = () => {
 				/>
 			</div>
 			<h2>YOUR FOUNDATIONS</h2>
-			{foundations.length === 0 || foundations === undefined ? (
+
+			{foundations.length === 0 || allFoundations === undefined ? (
 				<div className='not-found'>
 					<img src={loader} alt='loader' />
 				</div>
