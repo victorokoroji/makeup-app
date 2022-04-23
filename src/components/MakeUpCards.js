@@ -9,7 +9,7 @@ import loader from '../assets/images/loading.gif'
 const MakeupCards = () => {
 	const dispatch = useDispatch()
 	const allFoundations = useSelector(state => state.makeups, shallowEqual)
-	const foundations = allFoundations.slice(2, 52)
+	const foundations = allFoundations.slice(2, 72)
 	const [internalState, setInternalState] = useState(foundations)
 	const [inputStateValue, setInputStateValue] = useState('')
 
