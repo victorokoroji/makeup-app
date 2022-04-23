@@ -50,7 +50,11 @@ const MakeupCards = () => {
 				/>
 			</div>
 			<h2>YOUR FOUNDATIONS</h2>
-			{foundations.length !== 0 ? (
+			{foundations.length === 0 || foundations === undefined ? (
+				<div className='not-found'>
+					<img src={loader} alt='loader' />
+				</div>
+			) : (
 				<div className='cards'>
 					{(internalState.length === 0 ? foundations : internalState).map((foundation, index) => {
 						if (foundation === false) {
@@ -114,11 +118,7 @@ const MakeupCards = () => {
 						return false
 					})}
 				</div>
-			) : (
-				<div className='not-found'>
-					<img src={loader} alt='loader' />
-				</div>
-			)}
+			) }
 		</section>
 	)
 }
