@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation';
 
-const getMoviesFromServer = async () => {
+const getMakeupsFromServer = async () => {
   try {
     const response = await axios.get(`${BASE_URL}`);
     const datas = response.data;
@@ -12,4 +12,4 @@ const getMoviesFromServer = async () => {
   }
 };
 
-export default getMoviesFromServer;
+export default getMakeupsFromServer;
