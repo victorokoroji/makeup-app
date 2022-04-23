@@ -8,7 +8,7 @@ import { getAllFoundations } from '../redux/makeups/makeups';
 const MakeupCards = () => {
   const dispatch = useDispatch();
   const allFoundations = useSelector((state) => state.makeups, shallowEqual);
-  const foundations = allFoundations.slice(1, 102)
+  const foundations = allFoundations.slice(2, 102)
   const [internalState, setInternalState] = useState(foundations);
   const [inputStateValue, setInputStateValue] = useState('');
 
