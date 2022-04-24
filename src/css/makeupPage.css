@@ -1,3 +1,12 @@
+.makeup-section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.makeup-section header {
+  padding: 15px 5%;
+}
+
 .makeup-section header a {
   color: var(--white);
 }
@@ -6,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  padding-bottom: 20px;
   gap: 20px;
   background-color: var(--light-pink);
   align-items: center;
@@ -53,7 +63,7 @@ tbody tr {
 
 .base-text {
   text-align: center;
-  padding: 15px 10px;
+  padding: 20px 10px;
   line-height: 24px;
   background-color: var(--light-pink);
   color: var(--white);
@@ -62,7 +72,7 @@ tbody tr {
 .footer {
   background-color: rgb(51, 0, 9);
   color: var(--white);
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
