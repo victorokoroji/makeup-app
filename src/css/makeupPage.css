@@ -81,6 +81,9 @@ tbody tr {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {

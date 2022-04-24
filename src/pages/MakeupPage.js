@@ -34,9 +34,6 @@ const MakeupPage = () => {
         <button type="button" onClick={() => navigate(-1)} className="navigate">
           <FontAwesomeIcon icon={faArrowLeft} />
         </button>
-        {/* <NavLink to="/" onClick={() => dispatch(getAllFoundations())}>
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </NavLink> */}
         <h2>{data && data.brand}</h2>
         <div className="icons">
           <FontAwesomeIcon icon={faGear} />
