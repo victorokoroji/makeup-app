@@ -18,8 +18,7 @@
 .foundation-intro {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 30px 10px;
   gap: 20px;
   background-color: var(--light-pink);
   align-items: center;
@@ -40,7 +39,8 @@
 
 .makeup-desc p {
   background-color: var(--pink);
-  padding: 15px 0;
+  padding: 17px 0;
+  font-weight: bolder;
   text-align: center;
   color: var(--white);
 }
@@ -62,7 +62,7 @@ tbody tr {
   justify-content: space-between;
   align-items: center;
   color: var(--white);
-  padding: 15px;
+  padding: 17px 15px;
 }
 
 .base-text {
@@ -81,9 +81,6 @@ tbody tr {
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
