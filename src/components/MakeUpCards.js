@@ -19,7 +19,7 @@ const MakeupCards = () => {
 || foundation.brand.toLowerCase().includes(value.toLowerCase()),
     );
     filteredFoundations = filteredFoundations.length === 0 ? [false] : filteredFoundations;
-    setInternalState(() => filteredFoundations);
+    setInternalState(filteredFoundations);
   };
 
   const handleInputChange = (event) => {
