@@ -16,8 +16,8 @@ The application shows information about the varieties of makeup called 'Foundati
 
 ## Live Demo
 
-[Live Demo Link](https://makeupapp.netlify.app/)
-[Project Video Demo](https://www.loom.com/share/0728c31d1cb44a839f42e999bbdca97d)
+- [Live Demo Link](https://makeupapp.netlify.app/)
+- [Project Video Demo](https://www.loom.com/share/0728c31d1cb44a839f42e999bbdca97d)
 
 ### Prerequisites
 
