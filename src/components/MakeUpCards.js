@@ -25,7 +25,6 @@ const MakeupCards = () => {
   const handleInputChange = (event) => {
     setInputStateValue(() => {
       filterByNameOrBrand(event.target.value);
-      return event.target.value;
     });
   };
 
