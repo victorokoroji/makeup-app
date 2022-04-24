@@ -1,14 +1,18 @@
 .makeup-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .makeup-section header {
   padding: 15px 5%;
 }
 
-.makeup-section header a {
+.makeup-section header a,
+.navigate {
   color: var(--white);
+  border: none;
+  outline: none;
+  background: none;
 }
 
 .foundation-intro {

@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faGear } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { getAllFoundations } from '../redux/makeups/makeups';
 import TableRow from '../components/TableRow';
 
 const MakeupPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   let makeupId;
   if (location.state.foundations) {
@@ -30,9 +31,12 @@ const MakeupPage = () => {
   return (
     <section className="makeup-section">
       <header>
-        <NavLink to="/" onClick={() => dispatch(getAllFoundations())}>
+        <button type="button" onClick={() => navigate(-1)} className="navigate">
           <FontAwesomeIcon icon={faArrowLeft} />
-        </NavLink>
+        </button>
+        {/* <NavLink to="/" onClick={() => dispatch(getAllFoundations())}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </NavLink> */}
         <h2>{data && data.brand}</h2>
         <div className="icons">
           <FontAwesomeIcon icon={faGear} />
