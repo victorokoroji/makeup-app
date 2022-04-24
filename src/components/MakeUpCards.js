@@ -16,7 +16,7 @@ const MakeupCards = () => {
   const filterByNameOrBrand = (value) => {
     let filteredFoundations = foundations.filter(
       (foundation) => foundation.name.toLowerCase().includes(value.toLowerCase())
-	|| foundation.brand.toLowerCase().includes(value.toLowerCase()),
+|| foundation.brand.toLowerCase().includes(value.toLowerCase()),
     );
     filteredFoundations = filteredFoundations.length === 0 ? [false] : filteredFoundations;
     setInternalState(() => filteredFoundations);
@@ -50,73 +50,71 @@ const MakeupCards = () => {
       </div>
       <h2>YOUR FOUNDATIONS</h2>
 
-      {foundations.length === 0 || allFoundations === undefined ? (
+      {(foundations.length === 0 || allFoundations === undefined) ? (
         <div className="not-found">
           <img src={loader} alt="loader" />
         </div>
       ) : (
         <div className="cards">
           {(internalState.length === 0 ? foundations : internalState).map((foundation, index) => {
-					  if (foundation === false) {
-					    return (
-  <div key={uuidv4()} className="not-found">
-    {' '}
-    <p>No match found </p>
-    {' '}
-  </div>
-					    );
-					  }
+            if (foundation === false) {
+              return (
+                <div key={uuidv4()} className="not-found">
+                  <p>No match found </p>
+                </div>
+              );
+            }
 
-					  if (index % 2 === 0 && isEven) {
-					    isEven = !isEven;
-					    return (
-  <MakeUpCard
-    key={uuidv4()}
-    className="card even"
-    dataAos="flip-left"
-    foundation={foundation}
-    id={foundation.id}
-  />
-					    );
-					  }
-					  if (index % 2 === 0 && !isEven) {
-					    isEven = !isEven;
-					    return (
-  <MakeUpCard
-    key={uuidv4()}
-    className="card odd"
-    dataAos="flip-right"
-    foundation={foundation}
-    id={foundation.id}
-  />
-					    );
-					  }
-					  if (index % 2 === 1 && !isOdd) {
-					    isOdd = !isOdd;
-					    return (
-  <MakeUpCard
-    key={uuidv4()}
-    className="card odd"
-    dataAos="flip-left"
-    foundation={foundation}
-    id={foundation.id}
-  />
-					    );
-					  }
-					  if (index % 2 === 1 && isOdd) {
-					    isOdd = !isOdd;
+            if (index % 2 === 0 && isEven) {
+              isEven = !isEven;
+              return (
+                <MakeUpCard
+                  key={uuidv4()}
+                  className="card even"
+                  dataAos="flip-left"
+                  foundation={foundation}
+                  id={foundation.id}
+                />
+              );
+            }
+            if (index % 2 === 0 && !isEven) {
+              isEven = !isEven;
+              return (
+                <MakeUpCard
+                  key={uuidv4()}
+                  className="card odd"
+                  dataAos="flip-right"
+                  foundation={foundation}
+                  id={foundation.id}
+                />
+              );
+            }
+            if (index % 2 === 1 && !isOdd) {
+              isOdd = !isOdd;
+              return (
+                <MakeUpCard
+                  key={uuidv4()}
+                  className="card odd"
+                  dataAos="flip-left"
+                  foundation={foundation}
+                  id={foundation.id}
+                />
+              );
+            }
+            if (index % 2 === 1 && isOdd) {
+              isOdd = !isOdd;
 
-					    return (
-  <MakeUpCard
-    key={uuidv4()}
-    className="card even"
-    dataAos="flip-right"
-    foundation={foundation}
-    id={foundation.id}
-  />
-					    );
-					  }
-					  return false;
+              return (
+                <MakeUpCard
+                  key={uuidv4()}
+                  className="card even"
+                  dataAos="flip-right"
+                  foundation={foundation}
+                  id={foundation.id}
+                />
+              );
+            }
+            return false;
           })}
         </div>
       )}
